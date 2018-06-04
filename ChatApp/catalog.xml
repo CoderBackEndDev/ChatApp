@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/csaCw/CsaServer?wsdl" uri="xml-resources/web-service-references/CsaServer/wsdl/localhost_8080/csaCw/CsaServer.wsdl"/>
+    <system systemId="http://localhost:8080/csaCw/CsaServer?xsd=1" uri="xml-resources/web-service-references/CsaServer/wsdl/localhost_8080/csaCw/CsaServer.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/csaCw/CsaAdditional?wsdl" uri="xml-resources/web-service-references/CsaAdditional/wsdl/localhost_8080/csaCw/CsaAdditional.wsdl"/>
+    <system systemId="http://localhost:8080/csaCw/CsaAdditional?xsd=1" uri="xml-resources/web-service-references/CsaAdditional/wsdl/localhost_8080/csaCw/CsaAdditional.xsd_1.xsd"/>
+</catalog>

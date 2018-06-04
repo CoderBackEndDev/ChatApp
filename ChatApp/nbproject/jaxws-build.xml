@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-CsaServer" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CsaServer"/>
+        <property name="wsdl-CsaServer" location="xml-resources/web-service-references/CsaServer/wsdl/localhost_8080/csaCw/CsaServer.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CsaServer" destdir="${build.generated.dir}/jax-wsCache/CsaServer" wsdl="${wsdl-CsaServer}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/csaCw/CsaServer?wsdl" xnocompile="true" xendorsed="true" package="chatapp">
+            <depends file="${wsdl-CsaServer}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CsaServer"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CsaServer">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CsaServer" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/CsaServer"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/chatapp"/>
+    </target>
+    <target name="wsimport-client-CsaAdditional" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CsaAdditional"/>
+        <property name="wsdl-CsaAdditional" location="xml-resources/web-service-references/CsaAdditional/wsdl/localhost_8080/csaCw/CsaAdditional.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CsaAdditional" destdir="${build.generated.dir}/jax-wsCache/CsaAdditional" wsdl="${wsdl-CsaAdditional}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/csaCw/CsaAdditional?wsdl" xnocompile="true" xendorsed="true" package="chatapp">
+            <depends file="${wsdl-CsaAdditional}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CsaAdditional"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CsaAdditional">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CsaAdditional" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/CsaAdditional"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/chatapp"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-CsaServer, wsimport-client-CsaAdditional"/>
+</project>

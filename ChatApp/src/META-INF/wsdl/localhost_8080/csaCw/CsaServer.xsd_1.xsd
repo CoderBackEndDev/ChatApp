@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://ChatApp/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ChatApp/">
+
+<xs:element name="CreateThreads" type="tns:CreateThreads"/>
+
+<xs:element name="CreateThreadsResponse" type="tns:CreateThreadsResponse"/>
+
+<xs:element name="EditThread" type="tns:EditThread"/>
+
+<xs:element name="EditThreadResponse" type="tns:EditThreadResponse"/>
+
+<xs:element name="LoginUser" type="tns:LoginUser"/>
+
+<xs:element name="LoginUserResponse" type="tns:LoginUserResponse"/>
+
+<xs:element name="NewUser" type="tns:NewUser"/>
+
+<xs:element name="NewUserResponse" type="tns:NewUserResponse"/>
+
+<xs:element name="SearchMess" type="tns:SearchMess"/>
+
+<xs:element name="SearchMessResponse" type="tns:SearchMessResponse"/>
+
+<xs:element name="ThreadView" type="tns:ThreadView"/>
+
+<xs:element name="ThreadViewResponse" type="tns:ThreadViewResponse"/>
+
+<xs:element name="Usernamevalidity" type="tns:Usernamevalidity"/>
+
+<xs:element name="UsernamevalidityResponse" type="tns:UsernamevalidityResponse"/>
+
+<xs:element name="newMessage" type="tns:newMessage"/>
+
+<xs:element name="newMessageResponse" type="tns:newMessageResponse"/>
+
+<xs:complexType name="SearchMess">
+<xs:sequence>
+<xs:element name="ThreadNo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SearchMessResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CreateThreads">
+<xs:sequence>
+<xs:element name="Title" type="xs:string" minOccurs="0"/>
+<xs:element name="CreatedBy" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CreateThreadsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginUser">
+<xs:sequence>
+<xs:element name="Username" type="xs:string" minOccurs="0"/>
+<xs:element name="Password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ThreadView">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ThreadViewResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NewUser">
+<xs:sequence>
+<xs:element name="Nickname" type="xs:string" minOccurs="0"/>
+<xs:element name="Firstname" type="xs:string" minOccurs="0"/>
+<xs:element name="LastName" type="xs:string" minOccurs="0"/>
+<xs:element name="Username" type="xs:string" minOccurs="0"/>
+<xs:element name="Password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NewUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EditThread">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="EditThreadResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="newMessage">
+<xs:sequence>
+<xs:element name="ThreadID" type="xs:int"/>
+<xs:element name="Message" type="xs:string" minOccurs="0"/>
+<xs:element name="Username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="newMessageResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Usernamevalidity">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UsernamevalidityResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
